@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/key', function () {
     $response = Http::get('http://localhost:3000/key');
     return $response;
 });
 
 // Route::resource('/api/v1/products', 'ProductController');
-Route::resource('users', UserController::class);
+Route::resource('/', UserController::class);
