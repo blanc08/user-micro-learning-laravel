@@ -22,3 +22,7 @@ Route::get('/key', function () {
 
 // Route::resource('/api/v1/products', 'ProductController');
 Route::resource('/', UserController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

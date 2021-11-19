@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $response = Http::get('http://localhost:3000/users');
+        $response = Http::get('http://backend.test/users');
         $result = $response->object();
         return view('user.index', compact('result'));
     }
